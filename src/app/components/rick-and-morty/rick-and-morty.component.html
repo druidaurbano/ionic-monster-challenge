@@ -9,7 +9,7 @@
   </ul>
 
   <ion-content>
-    <ion-list class="characters-list">
+    <ion-list class="characters-list" [inset]="true">
       <ion-card class="character-item" *ngFor="let item of charactersList; let index">
         <img alt="Silhouette of mountains" src="{{item.thumbnail}}" />
         <ion-text>
