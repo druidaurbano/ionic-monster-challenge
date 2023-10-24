@@ -1,3 +1,25 @@
-<p>
-  rick-and-morty works!
-</p>
+<div class="ram-container">
+  <ul class="filter-list">
+    <button class="filter-button"
+            id="{{filterItem.id}}-fb"
+            *ngFor="let filterItem of filterList"
+            (clicK)="changeFilter(filterItem)">
+      <span>{{filterItem.name}}</span>
+    </button>
+  </ul>
+
+  <ion-content>
+    <ion-list class="characters-list">
+      <ion-card class="character-item" *ngFor="let item of charactersList; let index">
+        <img alt="Silhouette of mountains" src="{{item.thumbnail}}" />
+        <ion-text>
+          {{item.name}}
+        </ion-text>
+      </ion-card>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>
+</div>
