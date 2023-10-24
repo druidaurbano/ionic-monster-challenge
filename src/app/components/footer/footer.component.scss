@@ -1,0 +1,30 @@
+.footer-container {
+  width: 100%;
+  height: 80px;
+  border-radius: 16px;
+  background-color: #B3BAC3;
+
+  .list-button {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .button-footer {
+      width: 20%;
+      height: 80%;
+      padding: 0;
+      border-radius: 32px;
+      border: none;
+      background: #001A38;
+      color: #FFFFFF;
+    }
+  }
+}
+
+ion-fab-button::part(native) {
+  background-color: #001A38;
+  color: #FFFFFF;
+}

@@ -1,3 +1,12 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <app-rick-and-morty *ngIf="step === 'start'"></app-rick-and-morty>
+
+  <app-gps *ngIf="step === 'gps'"></app-gps>
+
+  <app-notification *ngIf="step === 'notification'"></app-notification>
+
+  <app-camera *ngIf="step === 'camera'"></app-camera>
+
+  <app-footer (changeStep)="changeStep($event)"></app-footer>
+
 </ion-app>

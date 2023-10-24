@@ -1,0 +1,10 @@
+<ion-fab slot="fixed" horizontal="end" vertical="bottom">
+  <ion-fab-button>
+    <ion-icon src="../../../assets/icon/menu-outline.svg"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button *ngFor="let buttonItem of buttonList" (click)="changeScreen(buttonItem)">
+      <ion-icon src="../../../assets/icon/{{buttonItem.icon}}.svg"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
